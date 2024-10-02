@@ -1,0 +1,163 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>makua general supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body id="abtus">
+    <nav class="navbar">
+      <div class="brand-title">Makua<span class="brand2">GeneralSupply</span></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="cross-button" ><a href="#"><img src="makua/cross.png" alt=""></a></div>
+
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="navbar-links2">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+<div class="head">
+  <h1>About us</h1>
+</div>
+<div class="abt"><h1>Fostering Agricultural Innovation and Livestock Prosperity with Integrity</h1></div>
+    <div class="grd">
+<div><img src="makua/bbbb.webp" alt=""></div>
+<div class="msg">
+
+  <p>Makua General Supply Limited is a leading private company based in Tanzania, dedicated to transforming the agricultural landscape through sustainable and innovative practices. With a mission to enhance productivity and promote long-term growth, the company provides a wide range of high-quality agricultural inputs, tools, and services tailored to meet the diverse needs of farmers across the country. By focusing on sustainable farming methods, Makua General Supply helps farmers improve their efficiency, increase crop yields, and enhance livestock health and quality.</p>
+
+  <p>
+    One of the company's core specialties is in cattle fattening, where they work closely with livestock farmers to optimize cattle weight and meat quality. Through well-researched feeding programs, expert advice, and access to essential resources, Makua General Supply empowers farmers to increase the profitability of their cattle, ensuring they meet market demands for healthier and more valuable livestock. This, in turn, significantly boosts the livelihoods of farmers and supports the growth of the local agricultural economy.</p>
+    
+    <p>  In addition to providing superior products and services, Makua General Supply is committed to environmental sustainability. The company advocates for eco-friendly farming techniques, ensuring that farmers can grow their crops and manage livestock without depleting the natural resources essential to future generations. By prioritizing sustainability, they contribute not only to improved agricultural productivity but also to the overall health and resilience of Tanzania's farming ecosystem.</p>
+
+    <p>
+    With a strong focus on customer service and farmer education, Makua General Supply offers ongoing support and training to ensure that farmers can maximize the benefits of their products and services. This commitment to long-term success has made the company a trusted partner for both smallholder and commercial farmers. Through its innovative solutions, dedication to sustainability, and farmer-centric approach, Makua General Supply Limited is shaping a brighter future for agriculture in Tanzania.</p>
+</div>
+
+</div>
+
+<div class="abt"><h1>Our mission & vision</h1></div>
+   <div>
+    
+   </div>
+      
+      
+
+    
+    <div class="footer">
+     <h2>MAKUA GENERAL SUPPLY LIMITED</h2>
+     <p>P.O.BOX 76730 Kongowe Dar es salaam.</p>
+     <p>expertise in buying and selling crops and cattle fattening</p>
+     <div class="ft">
+     <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+   
+    </ul>
+  </div>        
+  <hr style="margin-left: 40px; margin-right: 50px; ">
+  <div class="icons">
+    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+    <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
+    <a href=""> <i class="fa-brands fa-facebook"></i></a>
+    <a href=""> <i class="fa-brands fa-twitter"></i></a>
+</div>
+
+    </div> <!--footer-->
+
+
+    
+
+    
+  </body>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function showSlides() {
+      slides.forEach((slide, index) => {
+        slide.style.opacity = "0";
+        slide.classList.remove('active');
+      });
+  
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+  
+      slides[slideIndex - 1].style.opacity = "1";
+      slides[slideIndex - 1].classList.add('active');
+  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  
+    showSlides();
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
+<script>
+const toggleButton = document.querySelector('.toggle-button');
+const crossButton = document.querySelector('.cross-button');
+const navbarLinks2 = document.querySelector('.navbar-links2');
+
+// Show menu and hide toggle button, show cross button
+toggleButton.addEventListener('click', () => {
+navbarLinks2.classList.add('active');
+toggleButton.classList.add('hide');
+crossButton.classList.add('active');
+});
+
+// Hide menu and show toggle button again when cross is clicked
+crossButton.addEventListener('click', () => {
+navbarLinks2.classList.remove('active');
+toggleButton.classList.remove('hide');
+crossButton.classList.remove('active');
+});
+
+
+</script>
+</html>

@@ -15,18 +15,34 @@
       </head>
 
       <body>
-        <div class="wrapper">
-          
-          <div class="nav">
-            <div class="log"><img src="makua/logo.jpeg" ></div>
+        <nav class="navbar">
+          <div class="brand-title">Makua<span class="brand2">GeneralSupply</span></div>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+
+          <div class="cross-button" ><a href="#"><img src="makua/cross.png" alt=""></a></div>
+
+          <div class="navbar-links">
             <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">About Us</a></li>
-              <li><a href="">Contact</a></li>
-              <li ><a href="#gal">Gallery</a></li>
-           
+              <li><a href="#">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
             </ul>
           </div>
+          <div class="navbar-links2">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+        </nav>
+      
 
           <div class="welcome">
            Welcome to <br />Makua General Supply Limited
@@ -53,9 +69,9 @@
         <div >
           <h1>Fostering Agricultural Innovation and Livestock Prosperity with Integrity</h1>
           <p>"Fostering Agricultural Innovation and Livestock Prosperity with Integrity" encapsulates the core mission of Makua General Supply Limited,its unwavering commitment to advancing agriculture and livestock management in Tanzania.By prioritizing integrity in every aspect of its operations, Makua General Supply Limited builds trust with farmers, partners, and the community, fostering a culture of ethical business practices.</p>
-          <button class="btn"><a href="">Learn More</a></button>
+          
         </div>
-       
+        <button class="btn"><a href="">Learn More</a></button>
         </div><!--end of about-->
        
           
@@ -78,15 +94,15 @@
                           </div>
 
                           <div class="container">
-                            <img src="makua/alexander-grey--8a5eJ1-mmQ-unsplash.jpg" style="width:100%">
-                             <div class="sub">
-                                <h2>Buying and Selling Crops</h2>
+                            <img src="makua/quaritsch-photography-xZ07O0-yG1g-unsplash.jpg" style="width:100%">
+                              <div class="sub">
+                                <h2>Cattle fattening</h2>
                                 <p class="pp">
-                                  We provide a reliable marketplace for various crops, ensuring fair
-                                  prices and quality products.
+                                  Cattle fattening improves livestock weight and quality through efficient feeding.
                                 </p>
-                             </div>
-                           </div>
+                            </div>
+                          </div>
+
 
                            <div class="container">
                               <img src="makua/stijn-te-strake-UdhpcfImQ9Y-unsplash.jpg" style="width:100%">
@@ -162,12 +178,14 @@
        <section id="gal">
         <div class="meet"><h2>Gallery</h2></div>
         <div class="gallery">
-          <div class="fst"><img src="makua/user.png" alt=""></div>
-          <div class="fst"><img src="makua/user.png" alt=""></div>
-          <div class="fst"><img src="makua/user.png" alt=""></div>
-          <div class="fst"><img src="makua/user.png" alt=""></div>
-          <div class="fst"><img src="makua/user.png" alt=""></div>
-          <div class="fst"><img src="makua/user.png" alt=""></div>
+          <div class="fst"><img src="makua/zinc-maize_1.png" alt=""></div>
+          <div class="fst"><img src="makua/zinc-maize_1.png" alt=""></div>
+          <div class="fst"><img src="makua/zinc-maize_1.png" alt=""></div>
+          <div class="fst"><img src="makua/zinc-maize_1.png" alt=""></div>
+          <div class="fst"><img src="makua/zinc-maize_1.png" alt=""></div>
+          <div class="fst"><img src="makua/zinc-maize_1.png" alt=""></div>
+
+       
         </div><!--gallery-->
       </section>
 
@@ -216,12 +234,13 @@
          <h2>MAKUA GENERAL SUPPLY LIMITED</h2>
          <p>P.O.BOX 76730 Kongowe Dar es salaam.</p>
          <p>expertise in buying and selling crops and cattle fattening</p>
+
          <div class="ft">
          <ul>
           <li><a href="">Home</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="#gal">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
        
         </ul>
       </div>        
@@ -236,7 +255,7 @@
         </div> <!--footer-->
 
 
-        </div><!---end-->
+        
   
         
       </body>
@@ -273,4 +292,31 @@
             });
         });
     </script>
+
+
+<script>
+const toggleButton = document.querySelector('.toggle-button');
+const crossButton = document.querySelector('.cross-button');
+const navbarLinks2 = document.querySelector('.navbar-links2');
+
+// Show menu and hide toggle button, show cross button
+toggleButton.addEventListener('click', () => {
+  navbarLinks2.classList.add('active');
+  toggleButton.classList.add('hide');
+  crossButton.classList.add('active');
+});
+
+// Hide menu and show toggle button again when cross is clicked
+crossButton.addEventListener('click', () => {
+  navbarLinks2.classList.remove('active');
+  toggleButton.classList.remove('hide');
+  crossButton.classList.remove('active');
+});
+</script>
+
+<script>
+  fetch('about.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('abtus').innerHTML = data);
+</script>
     </html>

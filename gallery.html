@@ -1,0 +1,168 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>makua general supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body id="abtus">
+    <nav class="navbar">
+      <div class="brand-title">Makua<span class="brand2">GeneralSupply</span></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="cross-button" ><a href="#"><img src="makua/cross.png" alt=""></a></div>
+
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="navbar-links2">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+<div class="head">
+  <h1>OUR GALLERY</h1>
+</div>
+
+  <div class="blocks">
+    <div class="bck">
+    <img src="makua/zinc-maize_1.png" alt="">
+    </div>
+
+    <div class="bck">
+      <img src="makua/zinc-maize_1.png" alt="">
+    </div>
+
+    <div class="bck">
+      <img src="makua/zinc-maize_1.png" alt="">
+    </div>
+
+    <div class="bck">
+      <img src="makua/zinc-maize_1.png" alt="">
+    </div>
+
+    <div class="bck">
+      <img src="makua/zinc-maize_1.png" alt="">
+    </div>
+
+    <div class="bck">
+      <img src="makua/zinc-maize_1.png" alt="">
+    </div>
+   
+   
+  </div>
+      
+
+    
+    <div class="footer">
+     <h2>MAKUA GENERAL SUPPLY LIMITED</h2>
+     <p>P.O.BOX 76730 Kongowe Dar es salaam.</p>
+     <p>expertise in buying and selling crops and cattle fattening</p>
+     <div class="ft">
+     <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Gallery</a></li>
+   
+    </ul>
+  </div>        
+  <hr style="margin-left: 40px; margin-right: 50px; ">
+  <div class="icons">
+    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+    <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
+    <a href=""> <i class="fa-brands fa-facebook"></i></a>
+    <a href=""> <i class="fa-brands fa-twitter"></i></a>
+</div>
+
+    </div> <!--footer-->
+
+
+    
+
+    
+  </body>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function showSlides() {
+      slides.forEach((slide, index) => {
+        slide.style.opacity = "0";
+        slide.classList.remove('active');
+      });
+  
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+  
+      slides[slideIndex - 1].style.opacity = "1";
+      slides[slideIndex - 1].classList.add('active');
+  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  
+    showSlides();
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
+<script>
+const toggleButton = document.querySelector('.toggle-button');
+const crossButton = document.querySelector('.cross-button');
+const navbarLinks2 = document.querySelector('.navbar-links2');
+
+// Show menu and hide toggle button, show cross button
+toggleButton.addEventListener('click', () => {
+navbarLinks2.classList.add('active');
+toggleButton.classList.add('hide');
+crossButton.classList.add('active');
+});
+
+// Hide menu and show toggle button again when cross is clicked
+crossButton.addEventListener('click', () => {
+navbarLinks2.classList.remove('active');
+toggleButton.classList.remove('hide');
+crossButton.classList.remove('active');
+});
+
+
+</script>
+</html>
