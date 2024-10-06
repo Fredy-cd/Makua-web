@@ -216,47 +216,58 @@
           </div>  
         </div><!--team-->
 
-        <div class="test" ><h2>Testimonial</h2>
+        <div class="test">
+          <h2>Testimonial</h2>
+        </div>
+        
+        <div class="testimonial">
+            <div class="test-container active">
+              <h2 class="what">What they say about us</h2>
+              <p>"Makua General Supply Limited has completely transformed my farming experience. With their sustainable practices and high-quality inputs, my crop yield has doubled. Their support and dedication to improving agriculture are unmatched!"</p>
+              <h2 class="name">Jerome F Said</h2>
+              <p class="occ">Farmer, Mtwara</p>
+            </div>
+        
+              <div class="test-container">
+                <h2 class="what">What they say about us</h2>
+                <p>"Makua General Supply Limited has transformed the way we approach agriculture. Their innovative products and sustainable farming practices have significantly increased our crop yields. The team is always available for support, and we couldn't be happier with the results!"</p>
+                <h2 class="name">Salome Ajabu</h2>
+                <p class="occ">Farmer, Mwanza</p>
+              </div>
+        
+              <div class="test-container">
+                <h2 class="what">What they say about us</h2>
+                <p>"We’ve been working with Makua General Supply Limited for several years, and their commitment to quality is unmatched. From fertilizers to cattle fattening solutions, everything they offer helps us improve productivity. Highly recommended for any agribusiness."</p>
+                <h2 class="name">Dominic Thomas</h2>
+                <p class="occ">Farmer, Mbeya</p>
+              </div>
 
           </div>
-
-        <div class="testimonial" >
-            <div class="test-container" >
-              <h2 class="what">What they say about us</h2>
+      
+          <div class="footer">
+            <h2>MAKUA GENERAL SUPPLY LIMITED</h2>
+            <p>P.O.BOX 76730 Kongowe Dar es salaam.</p>
+            <p>expertise in buying and selling crops and cattle fattening"</p>
+   
+            <div class="ft">
+            <ul>
+             <li><a href="">Home</a></li>
+             <li><a href="about.html">About Us</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
           
-            <p>"Makua General Supply Limited has completely transformed my farming experience. With their sustainable practices and high-quality inputs, my crop yield has doubled. Their support and dedication to improving agriculture are unmatched!"</p>
-            <h2 class="name">Jerome F Said</h2>
-            <p class="occ">Farmer,Mtwara</p>
-           </div>
-        </div><!--testimonial-->
+           </ul>
+         </div>        
+         <hr style="margin-left: 40px; margin-right: 50px; ">
+         <div class="icons">
+           <a href=""> <i class="fa-brands fa-instagram"></i></a>
+           <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
+           <a href=""> <i class="fa-brands fa-facebook"></i></a>
+           <a href=""> <i class="fa-brands fa-twitter"></i></a>
+       </div>
+     
+           </div> <!--footer-->
 
-        <div class="footer">
-         <h2>MAKUA GENERAL SUPPLY LIMITED</h2>
-         <p>P.O.BOX 76730 Kongowe Dar es salaam.</p>
-         <p>expertise in buying and selling crops and cattle fattening</p>
-
-         <div class="ft">
-         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-       
-        </ul>
-      </div>        
-      <hr style="margin-left: 40px; margin-right: 50px; ">
-      <div class="icons">
-        <a href=""> <i class="fa-brands fa-instagram"></i></a>
-        <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""> <i class="fa-brands fa-facebook"></i></a>
-        <a href=""> <i class="fa-brands fa-twitter"></i></a>
-    </div>
-  
-        </div> <!--footer-->
-
-
-        
-  
         
       </body>
       <script>
@@ -318,5 +329,25 @@ crossButton.addEventListener('click', () => {
   fetch('about.html')
     .then(response => response.text())
     .then(data => document.getElementById('abtus').innerHTML = data);
+</script>
+
+<script >
+  let currentIndex = 0;
+const testimonials = document.querySelectorAll('.test-container');
+
+function showNextTestimonial() {
+  // Remove 'active' class from current testimonial
+  testimonials[currentIndex].classList.remove('active');
+
+  // Increment the index
+  currentIndex = (currentIndex + 1) % testimonials.length;
+
+  // Add 'active' class to the next testimonial
+  testimonials[currentIndex].classList.add('active');
+}
+
+// Change testimonial every 5 seconds
+setInterval(showNextTestimonial, 5000);
+
 </script>
     </html>
